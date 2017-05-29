@@ -1,4 +1,4 @@
-# This stores the salariedemployee information
+# This stores the SalaridEmployee information
 
 class SalariedEmployee:
 

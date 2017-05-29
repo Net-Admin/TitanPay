@@ -1,4 +1,4 @@
-# This stores the receipt information
+# This stores the Receipt information
 
 class Receipt:
 

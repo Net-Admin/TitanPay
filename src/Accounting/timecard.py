@@ -1,4 +1,4 @@
-# This stores the timecard information
+# This stores the TimeCard information
 
 class TimeCard:
 
