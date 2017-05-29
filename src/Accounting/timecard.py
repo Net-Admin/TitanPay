@@ -1,3 +1,5 @@
+# This stores the timecard information
+
 class TimeCard:
 
     def __init__(self, date, start_time, end_time):

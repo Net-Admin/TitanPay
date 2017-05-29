@@ -1,4 +1,4 @@
-# This has employee information
+# This stores the employee information
 
 class Employee :
 
