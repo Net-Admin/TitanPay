@@ -1,4 +1,4 @@
-# This stores the employee address information
+# This stores the Address information
 
 class Address:
 

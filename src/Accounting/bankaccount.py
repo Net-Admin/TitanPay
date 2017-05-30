@@ -1,4 +1,4 @@
-# This stores the employee bankaccount information
+# This stores the BankAccount information
 
 class BankAccount:
 
