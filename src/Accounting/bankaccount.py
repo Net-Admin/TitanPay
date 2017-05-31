@@ -7,4 +7,14 @@ class BankAccount:
         self.__routing_nmber = routing_number
         self.__account_id = account_id
 
+    def get_bank_name(self):
+        return self.__bank_name
     
+    def get_routing_nmber(self):
+        return self.__routing_nmber
+    
+    def get_account_id(self):
+        return self.__account_id
+    
+    def deposit(self,amt):
+        print("Depositing $", amt, "  in", bank_name, " Account Number ", account_id, " Using Routing Number: ", routing_number)
