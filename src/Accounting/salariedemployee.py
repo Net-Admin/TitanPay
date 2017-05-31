@@ -3,45 +3,27 @@
 class SalariedEmployee:
 
     def __init__(self, employee_id, first_name, last_name, salary, commission_rate, weekly_dues):
-        self.__employee_id = employee_id()
-        self.__first_name = first_name()
-        self.__last_name = last_name()
-        self.__salary = salary()
-        self.__commission_rate = commission_rate()
-        self.__weekly_dues = weekly_dues()
+        self.__employee_id = employee_id
+        self.__first_name = first_name
+        self.__last_name = last_name
+        self.__salary = salary
+        self.__commission_rate = commission_rate
+        self.__weekly_dues = weekly_dues
 
-    def set_employee_id(self, employee_id):
-        self.__employee_id = employee_id()
-
-    def set_first_name(self, first_name):
-        self.__first_name = first_name()
-
-    def set_last_name(self, last_name):
-        self.__last_name = last_name()
-
-    def set_hourly_rate(self, salary):
-        self.__salary = salary()
-
-    def set_commission_rate (self, commission_rate):
-        self.__commission_rate = commission_rate()
-
-    def set_weekly_dues(self, weekly_dues):
-        self.__weekly_dues = weekly_dues()
-
-    def get_employee_id(self):
-        return self.__employee_id()
+   def get_employee_id(self):
+        return self.__employee_id
 
     def get_first_name(self):
-        return self.__first_name()
+        return self.__first_name
 
     def get_last_name(self):
-        return self.__last_name()
+        return self.__last_name
 
     def get_salary(self):
-        return self.__salary()
+        return self.__salary
 
     def get_commission_rate (self):
-        return self.__commission_rate()
+        return self.__commission_rate
 
     def get_weekly_dues(self):
-        return self.__weekly_dues()
+        return self.__weekly_dues
