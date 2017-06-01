@@ -7,14 +7,5 @@ class Address:
         self.__state = state
         self.__zip = zip
 
-    def get_street_address(self):
-        return self.__street_address
-
-    def get_city(self):
-        return self.__city
-
-    def get_state(self):
-        return self.__state
-
-    def get_zip(self):
-        return self.__zip
+    def get_address(self):
+        return self.__street_address + " " self.__city + " ," self.__state + " " self.__zip

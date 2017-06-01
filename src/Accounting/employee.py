@@ -12,14 +12,5 @@ class Employee :
     def get_employee_id(self):
         return self.__employee_id
 
-    def get_first_name(self):
-        return self.__first_name
-
-    def get_last_name(self):
-        return self.__last_name
-
-    def get_hourly_rate(self):
-        return self.__hourly_rate
-
-    def get_weekly_dues(self):
-        return self.__weekly_dues
+    def get_full_name(self):
+        return self.__last_name + "," self.__first_name
