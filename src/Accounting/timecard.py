@@ -23,6 +23,4 @@ class TimeCard:
             pay = (1.5 * rate * (hours_worked - 8)) + 8 * rate
         else:
             pay = rate * hours_worked
-
-        return pay      
-    
+        return pay
