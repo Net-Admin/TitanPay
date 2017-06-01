@@ -17,11 +17,12 @@ class TimeCard:
         self.__end_time = end_time
         
     def calculate_daily_pay(self, rate):
+        pay = 0.00
         hours_worked = end_time - start_time
         if hours_worked > 8:
             pay = (1.5 * rate * (hours_worked - 8)) + 8 * rate
         else:
             pay = rate * hours_worked
 
-        return pay()      
+        return pay      
     
