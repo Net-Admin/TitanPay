@@ -8,4 +8,4 @@ class Address:
         self.__zip = zip
 
     def get_address(self):
-        return self.__street_address + " " self.__city + " ," self.__state + " " self.__zip
+        return self.__street_address + " " + self.__city + " " + self.__state + " " + self.__zip

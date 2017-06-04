@@ -12,4 +12,4 @@ class Employee :
         return self.__employee_id
 
     def get_full_name(self):
-        return self.__last_name + "," + self.__first_name
+        return self.__last_name + " ," + self.__first_name

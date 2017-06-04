@@ -24,4 +24,3 @@ class TimeCard:
         else:
             pay = rate * hours_worked
         return pay
-    
