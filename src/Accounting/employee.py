@@ -6,11 +6,10 @@ class Employee :
         self.__employee_id = employee_id
         self.__first_name = first_name
         self.__last_name = last_name
-        self.__hourly_rate = hourly_rate
         self.__weekly_dues = weekly_dues
 
     def get_employee_id(self):
         return self.__employee_id
 
     def get_full_name(self):
-        return self.__last_name + "," self.__first_name
+        return self.__last_name + "," + self.__first_name
