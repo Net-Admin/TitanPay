@@ -15,12 +15,3 @@ class SalariedEmployee:
 
    def get_full_name(self):
         return self.__last_name + "" self.__first_name
-
-   def get_salary(self):
-        return self.__salary
-
-   def get_commission_rate (self):
-        return self.__commission_rate
-
-   def get_weekly_dues(self):
-        return self.__weekly_dues
