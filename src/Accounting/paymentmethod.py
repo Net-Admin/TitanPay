@@ -2,5 +2,6 @@
 
 class PaymentMethod
 
-    def __init__(self):
+    def __init__(self, pay):
+        self.__pay = pay
         pass
