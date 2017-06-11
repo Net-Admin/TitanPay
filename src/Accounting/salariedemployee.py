@@ -11,3 +11,6 @@ class SalariedEmployee (Employee):
     def __makeSale(double_amt):
         reciept = Receipt(self, transaction_amt)
         self.__reciept_history.append(Receipt)
+    
+    def calculate_pay(self, receipt, commission)
+        
