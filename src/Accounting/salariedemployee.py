@@ -13,4 +13,5 @@ class SalariedEmployee (Employee):
         self.__reciept_history.append(Receipt)
     
     def calculate_pay(self, receipt, commission)
+    
         
