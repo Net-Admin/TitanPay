@@ -7,3 +7,7 @@ class SalariedEmployee (Employee):
         Receipt.__init__(self, employee_id, first_name, last_name, reciept_amt)
         self.__salary = salary
         self.__commission_rate = commission_rate
+        
+    def __makeSale(double_amt):
+        reciept = Receipt(self, transaction_amt)
+        self.__reciept_history.append(Receipt)
