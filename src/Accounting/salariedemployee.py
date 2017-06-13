@@ -1,6 +1,6 @@
 # This stores the SalaridEmployee information
 
-class SalariedEmployee (Employee):
+class SalariedEmployee(Employee):
 
     def __init__(self, employee_id, first_name, last_name, salary, commission_rate, weekly_dues):
         Employee.__init__(self, employee_id, first_name, last_name, weekly_dues)
