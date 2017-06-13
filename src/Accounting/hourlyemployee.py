@@ -1,3 +1,4 @@
+import datetime
 class HourlyEmployee(Employee, TimeCard):
 
     def __init__(self, employee_id, first_name, last_name, hourly_rate, weekly_dues, clockIn, clockOut):
@@ -7,12 +8,15 @@ class HourlyEmployee(Employee, TimeCard):
         self.__clockIn = ClockIn
         self.__clockOut = ClockOut
         
+    def __date_time(self,datetime):
+        now = datetime.datetime.now()
+        
     def __clockin__(self, TimeCard):
-        time_card = TimeCard(self, date, time)
+        time_card = TimeCard(self, now)
         self.__timecard_history.append(time_card)
         
     def __clockout__(self, TimeCard):
         get (TimeCard)
-        time_card = TimeCard(self, date, time)
+        time_card = TimeCard(self, now)
         
         
