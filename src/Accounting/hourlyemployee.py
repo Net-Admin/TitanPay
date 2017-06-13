@@ -19,4 +19,8 @@ class HourlyEmployee(Employee, TimeCard):
         get (TimeCard)
         time_card = TimeCard(self, now)
         
+    def __calculate_pay__(self, time_card, hourly_rate):
+        pay = time_card * hourly_rate
+        time_card = 0
+        
         
