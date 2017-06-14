@@ -1,5 +1,4 @@
 from datetime import datetime
-from datetime import timedelta
 
 class HourlyEmployee(Employee):
 
@@ -17,14 +16,24 @@ class HourlyEmployee(Employee):
         self.__time_cards.append(tc)
 
     def clockOut(self):
-        self.clock_out = datetime.strftime('%m/%d/%Y %H:%M:%S')
-        for tc in self.__timecards:
-            if tc.get_date() >= current_dt:
+         for tc in self.__timecards:
+         if tc.get_date() >= current_dt:
                 tc.clockOut()
 
     def calculate_pay__(self, start_dt, end_dt):
         #iterate over the timecards
+
         # test if date of the timecard is between start_dt & end_dt
+    def time_in_range(start_dt, end_dt, x):
+            today = datetime.date.today()
+            start_dt = datetime.datetime.combine(today, start_dt)
+            end_dt = datetime.datetime.combine(today, end_dt)
+            x = datetime.datetime.combine(today, x)
+            if end <= start:
+                end += datetime.timedelta(1)  # tomorrow!
+            if x <= start
+                x += datetime.timedelta(1)  # tomorrow!
+            return start_dt <= x <= end_dt
         # if yes then call tc.calculate_pay(self, hourly_rate) & add result to total
         pay = time_card * hourly_rate
         time_card = 0
