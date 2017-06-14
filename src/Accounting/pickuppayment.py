@@ -3,4 +3,6 @@
 class PickUpPayment(PaymentMethod):
 
     def __init__(self):
-        pass
+
+    def pickup_payment(self, pay, Address):
+                print("A check for $ ", pay, " is waiting for ", Self, " at the PostMaster. ")

@@ -21,23 +21,16 @@ class HourlyEmployee(Employee):
                 tc.clockOut()
 
     def calculate_pay__(self, start_dt, end_dt):
+        time_cards = 0
+        for time_cards in self.__time_cards:
+            if time_card.get_date() <=start_dt amd time_cards.get_date() >= end_dt
+                total += time_cards.calculate_daily_pay(self.__hourly_rate):
         #iterate over the timecards
-
         # test if date of the timecard is between start_dt & end_dt
-    def time_in_range(start_dt, end_dt, x):
-            today = datetime.date.today()
-            start_dt = datetime.datetime.combine(today, start_dt)
-            end_dt = datetime.datetime.combine(today, end_dt)
-            x = datetime.datetime.combine(today, x)
-            if end <= start:
-                end += datetime.timedelta(1)  # tomorrow!
-            if x <= start
-                x += datetime.timedelta(1)  # tomorrow!
-            return start_dt <= x <= end_dt
         # if yes then call tc.calculate_pay(self, hourly_rate) & add result to total
         pay = time_card * hourly_rate
-        time_card = 0
 
-        self.__payment_method.pay(result)
+        self.get__payment_method().pay("$s %s" % (self.get_first_name(), self.get_last_name(), total):
+
         
         
