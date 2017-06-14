@@ -2,7 +2,7 @@
 
 class SalariedEmployee(Employee):
 
-    def __init__(self, employee_id, first_name, last_name, salary, commission_rate, receipts, weekly_dues):
+    def __init__(self, employee_id, first_name, last_name, salary, commission_rate, weekly_dues):
         Employee.__init__(self, employee_id, first_name, last_name, weekly_dues)
         Receipt.__init__(self, employee_id, first_name, last_name, receipt_amt)
         self.__salary = salary
@@ -13,6 +13,6 @@ class SalariedEmployee(Employee):
         reciept = receipt(self, transaction_amt)
         self.__receipt_history.append(receipt)
     
-    def calculate_pay(self, receipt, commission):
+    def calculate_pay(self):
         pay = receipt * commission
 

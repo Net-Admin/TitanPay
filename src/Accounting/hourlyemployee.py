@@ -6,7 +6,7 @@ class HourlyEmployee(Employee):
         Employee.__init__(self, employee_id, first_name, last_name, weekly_dues)
         self.__hourly_rate = hourly_rate
         self.__timecards = []
-        self.__payment_method = pay_method
+        self.__payment_method = payment_method
         
     def __date_time(self,datetime):
         now = datetime.datetime.now()
