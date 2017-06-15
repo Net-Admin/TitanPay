@@ -22,10 +22,15 @@ class HourlyEmployee(Employee):
 
     def calculate_pay__(self, start_dt, end_dt):
         time_cards = 0
+        start_dt = 0
+        total_pay = 0
+        end_dt = start_dt + 14
         for time_cards in self.__time_cards:
-            if time_card.get_date() <=start_dt amd time_cards.get_date() >= end_dt
+            if time_card.get_date() <=start_dt and time_cards.get_date() >= end_dt
                 total += time_cards.calculate_daily_pay(self.__hourly_rate):
                 pay = time_card * hourly_rate
+
+        pay = total_pay
 
         self.get__payment_method().pay("$s %s" % (self.get_first_name(), self.get_last_name(), total):
 
