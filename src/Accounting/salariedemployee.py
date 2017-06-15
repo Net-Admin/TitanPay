@@ -15,4 +15,17 @@ class SalariedEmployee(Employee):
     
     def calculate_pay(self):
         pay = receipt * commission
+    
+    def calculate_pay__(self, start_dt, end_dt):
+        commission = 0
+        start_dt = 0
+        total_pay = 0
+        end_dt = start_dt + 28
+        for time_cards in self.__time_cards:
+            if time_card.get_date() <=start_dt and time_cards.get_date() >= end_dt
+                total += time_cards.calculate_daily_pay(self.__hourly_rate):
+        #iterate over the timecards
+        # test if date of the timecard is between start_dt & end_dt
+        # if yes then call tc.calculate_pay(self, hourly_rate) & add result to total
+        pay = total_pay
 
