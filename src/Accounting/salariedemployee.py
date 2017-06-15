@@ -21,9 +21,9 @@ class SalariedEmployee(Employee):
         start_dt = 0
         total_pay = 0
         end_dt = start_dt + 28
-        for time_cards in self.__time_cards:
-            if time_card.get_date() <=start_dt and time_cards.get_date() >= end_dt
-                total += time_cards.calculate_daily_pay(self.__hourly_rate):
+        for receipts in self.__Receipts:
+            if reciepts.get_date() <=start_dt and receipts.get_date() >= end_dt
+                total += receipts.calculate_daily_pay(self.__commission_rate):
         #iterate over the timecards
         # test if date of the timecard is between start_dt & end_dt
         # if yes then call tc.calculate_pay(self, hourly_rate) & add result to total
