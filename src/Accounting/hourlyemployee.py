@@ -25,10 +25,7 @@ class HourlyEmployee(Employee):
         for time_cards in self.__time_cards:
             if time_card.get_date() <=start_dt amd time_cards.get_date() >= end_dt
                 total += time_cards.calculate_daily_pay(self.__hourly_rate):
-        #iterate over the timecards
-        # test if date of the timecard is between start_dt & end_dt
-        # if yes then call tc.calculate_pay(self, hourly_rate) & add result to total
-        pay = time_card * hourly_rate
+                pay = time_card * hourly_rate
 
         self.get__payment_method().pay("$s %s" % (self.get_first_name(), self.get_last_name(), total):
 
