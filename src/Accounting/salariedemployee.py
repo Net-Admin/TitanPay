@@ -20,7 +20,7 @@ class SalariedEmployee(Employee):
         end_dt = start_dt + 28
         for receipts in self.__Receipts:
             if reciepts.get_date() <=start_dt and receipts.get_date() >= end_dt
-                total += receipts.calculate_daily_pay(self.__commission_rate):
+                total += receipts.calculatecommission_rate(self.__commission_rate):
         
         pay = total_pay
 
