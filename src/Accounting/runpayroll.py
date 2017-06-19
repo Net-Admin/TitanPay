@@ -12,9 +12,9 @@ class RunningPayroll:
         self.my_button1.pack()
         self.quit_button.pack()
 
-        employee_file = open(r'c:\users\medic24\desktop\spc\cop3035\files\compiled_employees.txt', 'a')
-        timesheet_file = open(r'c:\users\medic24\desktop\spc\cop3035\files\timesheet.txt', 'a')
-        payment_file = open(r'c:\users\medic24\desktop\spc\cop3035\files\.txt', 'a')
+        employee_file = open(compiled_employees.txt', 'a')
+        timesheet_file = open(timesheet.txt', 'a')
+        payment_file = open(.txt', 'a')
 
         tkinter.mainloop()
 
