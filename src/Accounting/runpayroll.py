@@ -14,8 +14,8 @@ class RunningPayroll:
         self.my_button1.pack()
         self.quit_button.pack()
 
-        employee_file = open('compiled_employees.txt', 'r')
-        timesheet_file = open('timesheet.txt', 'r')
+        
+        timesheet_file = open('timecards.csv', 'r')
         
 
         tkinter.mainloop()
@@ -29,8 +29,15 @@ class RunningPayroll:
         self.quit_button2.pack()
                             
     def run(self):
-        infile = open('compiled_employees.txt', 'r')
+        employee_list = []
+        infile = open('hourly_employees.csv', 'r')
         file_contents = infile.read()
+        infile = open('timecards.csv', 'r')
+        file_contents - infile.read()
+        
+        for count in range(employee_list):
+            
+            
         
     # create an instance of Running Payroll
 run_payroll = RunningPayroll()
