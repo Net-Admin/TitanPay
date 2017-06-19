@@ -5,4 +5,4 @@ class DirectDepositPayment(PaymentMethod):
     def __init__(self):
 
     def deposit(self, amt):
-        return deposit
+        return ("Depositing $", amt, " in", bank_name, " Account Number ", account_id, " Using Routing Number: ", routing_number)
