@@ -42,7 +42,7 @@ class RunningPayroll:
     
     pay = HourlyEmployees.get(self, pay)
     
-    print(self.payment_method)
+    print(self.paymentmethod)
                      
     # create an instance of Running Payroll
 run_payroll = RunningPayroll()
