@@ -5,4 +5,4 @@ class MailPayment(PaymentMethod):
     def __init__(self):
 
     def mail_payment(self, pay, Address):
-        print ("Mailing a check to ",self," for $",pay," to ",Address)
+        return ("Mailing a check to ",self," for $",pay," to ",Address)
