@@ -40,9 +40,9 @@ class RunningPayroll:
            employees_list.append(employees)
         return employees_list
     
-    pay = HourlyEmployees.get(self, pay)
+        pay = HourlyEmployees.get(self, pay)
     
-    print(self.paymentmethod)
+        tkinter.messagebox.showinfo('Response', 'self.payment_method')
                      
     # create an instance of Running Payroll
 run_payroll = RunningPayroll()
