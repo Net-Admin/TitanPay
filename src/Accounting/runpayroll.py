@@ -16,7 +16,7 @@ class RunningPayroll:
 
         employee_file = open('compiled_employees.txt', 'r')
         timesheet_file = open('timesheet.txt', 'r')
-        payment_file = open('.txt', 'r')
+        
 
         tkinter.mainloop()
 
