@@ -29,15 +29,18 @@ class RunningPayroll:
         self.quit_button2.pack()
                             
     def run(self):
-        employee_list = []
+        employees_list = []
         infile = open('hourly_employees.csv', 'r')
         file_contents = infile.read()
         infile = open('timecards.csv', 'r')
         file_contents - infile.read()
         
-        for count in range(employee_list):
-            
-            
-        
+        for count in range(employees_list):
+           employees = employees.Employees(self, employee_id, clock_in, clock_out)
+           employees_list.append(employees)
+        return employees_list
+    
+    
+                     
     # create an instance of Running Payroll
 run_payroll = RunningPayroll()
