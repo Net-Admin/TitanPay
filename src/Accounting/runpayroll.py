@@ -30,9 +30,9 @@ class RunningPayroll:
                             
     def run(self):
         employees_list = []
-        infile = open('hourly_employees.csv', 'r')
+        infile = open('D:\Users\medic\PycharmProjects\TitanPay\src\Accounting\hourly_employees.csv', 'r')
         file_contents = infile.read()
-        infile = open('timecards.csv', 'r')
+        infile = open('D:\Users\medic\PycharmProjects\TitanPay\src\Accounting\timecards.csv', 'r')
         file_contents - infile.read()
         
         for count in range(employees_list):
@@ -45,4 +45,4 @@ class RunningPayroll:
         tkinter.messagebox.showinfo('Response', 'self.payment_method')
                      
     # create an instance of Running Payroll
-run_payroll = RunningPayroll()
+runpayroll = RunningPayroll()
