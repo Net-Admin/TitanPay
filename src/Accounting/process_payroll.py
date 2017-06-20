@@ -1,16 +1,21 @@
 import tkinter
+import os
+import sys
 
 class ProcessingPayroll:
 
     def __init__(self):
         self.main_window =tkinter.Tk()
 
+    #def payroll():
+        #os.system('runpayroll.py')
+
         self.my_button1 = tkinter.Button(self.main_window, text='Processing Payroll')
         self.my_button2 = tkinter.Button(self.main_window, text='View/Add Employees.')
         self.my_button3 = tkinter.Button(self.main_window, text='View All Time Cards')
         self.my_button4 = tkinter.Button(self.main_window, text='View Pay Rate/Salary For Employee')
         self.my_button5 = tkinter.Button(self.main_window, text='View Sales For Employee')
-        self.my_button6 = tkinter.Button(self.main_window, text='Chane Payroll Payment Method')
+        self.my_button6 = tkinter.Button(self.main_window, text='Change Payroll Payment Method')
         self.my_button7 = tkinter.Button(self.main_window, text='Run Payroll')
         self.quit_button = tkinter.Button(self.main_window, text='QUIT', command=self.main_window.destroy)
 
