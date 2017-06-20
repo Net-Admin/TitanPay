@@ -15,7 +15,7 @@ class RunningPayroll:
         self.quit_button.pack()
 
         
-        timesheet_file = open('timecards.csv', 'r')
+        timesheet_file = open('timecards.txt', 'r')
         
 
         tkinter.mainloop()
@@ -30,9 +30,9 @@ class RunningPayroll:
                             
     def run(self):
         employees_list = []
-        infile = open('D:\Users\medic\PycharmProjects\TitanPay\src\Accounting\hourly_employees.csv', 'r')
+        infile = open(r'D:\Users\medic\PycharmProjects\TitanPay\src\Accounting\compiled_employees.txt', 'r')
         file_contents = infile.read()
-        infile = open('D:\Users\medic\PycharmProjects\TitanPay\src\Accounting\timecards.csv', 'r')
+        infile = open(r'D:\Users\medic\PycharmProjects\TitanPay\src\Accounting\timecards.txt', 'r')
         file_contents - infile.read()
         
         for count in range(employees_list):
