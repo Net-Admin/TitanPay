@@ -4,22 +4,13 @@ import tkinter.messagebox
 class RunningPayroll:
 
     def __init__(self, employee):
-        self.main_window =tkinter.Tk()
+        self.main_window = tkinter.Tk()
         self.new_window = tkinter.Tk()
         self.employee = employee
 
-        self.my_button1 = tkinter.Button(self.main_window, text='Process Payroll', command=self.run_payroll)
-        self.quit_button = tkinter.Button(self.main_window, text='QUIT', command=self.main_window.destroy)
-        
+        #timesheet_file = open('timecards.txt', 'r')
 
-        self.my_button1.pack()
-        self.quit_button.pack()
-
-        
-        timesheet_file = open('timecards.txt', 'r')
-        
-
-        tkinter.mainloop()
+        #tkinter.mainloop()
 
     # def do_something(self):
     def run_payroll(self):
@@ -47,5 +38,12 @@ class RunningPayroll:
     
         tkinter.messagebox.showinfo('Response', 'self.payment_method')
                      
-    # create an instance of Running Payroll
+# create an instance of Running Payroll
 runpayroll = RunningPayroll()
+
+# self.my_button1 = tkinter.Button(self.main_window, text='Process Payroll', command=self.run_payroll)
+# self.quit_button = tkinter.Button(self.main_window, text='QUIT', command=self.main_window.destroy)
+
+# self.my_button1.pack()
+# self.quit_button.pack()
+
