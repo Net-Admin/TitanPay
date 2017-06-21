@@ -3,10 +3,11 @@ import tkinter.messagebox
 
 class RunningPayroll:
 
-    def __init__(self, employee):
+    def __init__(self):
+        #self.employee = employee
         self.main_window = tkinter.Tk()
         self.new_window = tkinter.Tk()
-        self.employee = employee
+
 
         #timesheet_file = open('timecards.txt', 'r')
 
