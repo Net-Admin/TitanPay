@@ -1,4 +1,10 @@
+import sys
+import os
 import tkinter
+from tkinter import messagebox
+
+def payroll(self)
+    os.system('python runpayroll.py')
 
 class ProcessingPayroll:
 
@@ -11,7 +17,7 @@ class ProcessingPayroll:
         self.my_button4 = tkinter.Button(self.main_window, text='View Pay Rate/Salary For Employee')
         self.my_button5 = tkinter.Button(self.main_window, text='View Sales For A Salaried Employee')
         self.my_button6 = tkinter.Button(self.main_window, text='Change Payroll Payment Method')
-        self.my_button7 = tkinter.Button(self.main_window, text='Run Payroll And View Results')
+        self.my_button7 = tkinter.Button(self.main_window, text='Run Payroll And View Results', command=self.payroll)
         self.quit_button = tkinter.Button(self.main_window, text='QUIT', command=self.main_window.destroy)
 
         self.label1.pack()
