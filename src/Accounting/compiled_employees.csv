@@ -1,0 +1,21 @@
+EmployeeId,FirstName,LastName,HourlyRate,Salary,CommissionRate,UnionDues,PaymentMethod
+1,Jones,John,,85000,5,150, DD 
+2,Kivell,Kevin,,90000,5,150, DD 
+3,Jardine,Jesse,,120000,5,150, DD 
+4,Gill,Johnny,,45000,5,150, DD 
+5,Sorvino,Sybil,,50000,5,150, DD 
+6,Hart,Kevin,9.99,,,150, DD 
+7,Andrews,Adam,,100000,0,150, PU 
+8,Murphy,Eddie,9.99,,,150, DD 
+9,Thompson,Terry,,180000,0,150, PU 
+10,Platt,Chris,9.99,,,150, DD 
+11,Morgan,Michael,,200000,0, -   , MA 
+12,Howard,Robert,,65000,20, -   , MA 
+13,Parent,Patric,,65000,20, -   , MA 
+14,Lycnh,Marshawn,9.99,,,150, DD 
+15,Smith,Sue,,65000,20, -   , MA 
+16,Ferguson,Kevin,9.99,,,150, DD 
+17,Andrews,Erin,15.5,,,150, PU 
+18,Azalea,Iggy,25.5,,,150, PU 
+19,Spears,Brittany,35.5,,, -   , MA 
+20,Jackson,Janet,30,,, -   , MA 
