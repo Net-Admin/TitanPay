@@ -17,15 +17,19 @@ class RunningPayroll:
                             
     def run(self):
         employee_list = []
+        #looks at hourly_employees
         hinfile = open('hourly_employees.csv', 'r')
         hr_contents = hinfile.readline()
         hr_contents = hinfile.readline()
+        #looks at timecards
         tinfile = open('timecards.csv', 'r')
         t_contents = tinfile.readline()
         t_contents = tinfile.readline()
+        #looks at salaried_employees
         sinfile = open('salaried_employees.csv', 'r')
         sal_contents = sinfile.readline()
         sal_contents = sinfile.readline()
+        #looks at receipts
         recfile = open('receipts.csv', 'r')
         rec_contents = recfile.readline()
         rec_contents = recfile.readline()
@@ -33,8 +37,8 @@ class RunningPayroll:
         while hr_contents != '':
            employ = hr_contents.split(',')
            employee_id = int(employ[0])
-           first_name = int(employ(2))
            last_name = int(employ(1))
+           first_name = int(employ(2))
            hourlyrate = int(employ(3))
            uniondues = int(employ(4))
            payment_method = int(employ(5))
@@ -51,8 +55,8 @@ class RunningPayroll:
         while sal_contents != '':
             employ = sal_contents.split(',')
             employee_id = int(employ[0])
-            first_name = int(employ(2))
             last_name = int(employ(1))
+            first_name = int(employ(2))
             salary = int(employ(3))
             commissionrate = int(employ(4))
             uniondues = int(employ(5))
