@@ -1,19 +1,13 @@
 import tkinter
-import tkinter.messagebox
+from tkinter import messagebox
 
 class RunningPayroll:
 
-    def __init__(self):
-        #self.employee = employee
+    def __init__(self, employee):
+        self.employee = employee
         self.main_window = tkinter.Tk()
         self.new_window = tkinter.Tk()
 
-
-        #timesheet_file = open('timecards.txt', 'r')
-
-        #tkinter.mainloop()
-
-    # def do_something(self):
     def run_payroll(self):
         self.my_button2 = tkinter.Button(self.new_window, text='Run Payroll', command=self.run)
         self.quit_button2 = tkinter.Button(self.new_window, text='QUIT', command=self.new_window.destroy)
