@@ -35,13 +35,13 @@ class RunningPayroll:
         rec_contents = recfile.readline()
         
         while hr_contents != '':
-           employ = hr_contents.split(',')
-           employee_id = int(employ[0])
-           last_name = int(employ(1))
-           first_name = int(employ(2))
-           hourlyrate = int(employ(3))
-           uniondues = int(employ(4))
-           payment_method = int(employ(5))
+           employee = hr_contents.split(',')
+           employee_id = int(employee[0])
+           last_name = int(employee(1))
+           first_name = int(employee(2))
+           hourlyrate = int(employee(3))
+           uniondues = int(employee(4))
+           payment_method = int(employee(5))
            while t_contents != "":
                time = t_contents.split(',')
                if int(time[0]) == employee_id:
@@ -55,12 +55,12 @@ class RunningPayroll:
         while sal_contents != '':
             employ = sal_contents.split(',')
             employee_id = int(employ[0])
-            last_name = int(employ(1))
-            first_name = int(employ(2))
-            salary = int(employ(3))
-            commissionrate = int(employ(4))
-            uniondues = int(employ(5))
-            payment_method = int(employ(6))
+            last_name = int(employee(1))
+            first_name = int(employee(2))
+            salary = int(employee(3))
+            commissionrate = int(employee(4))
+            uniondues = int(employee(5))
+            payment_method = int(employee(6))
             salemployee = employee.salariedemployee(self, employee_id, first_name, last_name, salary, commissionrate, uniondues, payment_method)
             employee_list.append(salemployee)
             while rec_contents != "":
