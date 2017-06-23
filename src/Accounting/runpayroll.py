@@ -3,7 +3,7 @@ from tkinter import messagebox
 
 class RunningPayroll:
 
-    def __init__(self, employee):
+    def __init__(self,employee):
         self.main_window = tkinter.Tk()
         self.new_window = tkinter.Tk()
         self.employee = employee
