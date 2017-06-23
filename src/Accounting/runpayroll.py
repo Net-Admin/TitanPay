@@ -37,11 +37,11 @@ class RunningPayroll:
         while hr_contents != '':
            employee = hr_contents.split(',')
            employee_id = int(employee[0])
-           last_name = int(employee(1))
-           first_name = int(employee(2))
-           hourlyrate = int(employee(3))
-           uniondues = int(employee(4))
-           payment_method = int(employee(5))
+           last_name = int(employee[1])
+           first_name = int(employee[2])
+           hourlyrate = int(employee[3])
+           uniondues = int(employee[4])
+           payment_method = int(employee[5])
            while t_contents != "":
                time = t_contents.split(',')
                if int(time[0]) == employee_id:
