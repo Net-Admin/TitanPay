@@ -1,4 +1,9 @@
 # This stores the Employee information
+from datetime import date
+from datetime import datetime
+from datetime import timedelta
+from receipt import Receipt
+from timecard import TimeCard
 
 class Employee :
 
@@ -11,5 +16,14 @@ class Employee :
     def get_employee_id(self):
         return self.__employee_id
 
+    def get_first_name(self):
+        return self.__first_name
+
+    def get_last_name(self):
+        return self.__last_name
+
     def get_full_name(self):
-        return self.__last_name + " ," + self.__first_name
+        return "%s, %s" % (self.__last_name + " ," + self.__first_name)
+
+    def get_union_dues(self):
+        return self._weekly_dues
