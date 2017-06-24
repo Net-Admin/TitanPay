@@ -5,8 +5,9 @@ class HourlyEmployee(Employee):
     def __init__(self, employee_id, first_name, last_name, hourly_rate, weekly_dues, payment_method):
         Employee.__init__(self, employee_id, first_name, last_name, weekly_dues)
         self.__hourly_rate = hourly_rate
-        self.__timecards = []
         self.__payment_method = payment_method
+        self.__timecards = []
+
         
     def __date_time(self,datetime):
         now = datetime.datetime.now()
@@ -29,10 +30,10 @@ class HourlyEmployee(Employee):
             if time_card.get_date() <=start_dt and time_cards.get_date() >= end_dt
                 total += time_cards.calculate_daily_pay(self.__hourly_rate):
                 pay = time_card * hourly_rate
-
-        pay = total_pay
-
-        self.get__payment_method().pay("$s %s" % (self.get_first_name(), self.get_last_name(), total):
+            total -= self.get_union_dues
+            if total <= 0:
+                total = 0
+        return self.get__payment_method().pay("$s %s" % (self.get_first_name(), self.get_last_name(), total):
 
         
         

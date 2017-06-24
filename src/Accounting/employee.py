@@ -26,4 +26,7 @@ class Employee :
         return "%s, %s" % (self.__last_name + " ," + self.__first_name)
 
     def get_union_dues(self):
-        return self._weekly_dues
+        return self.__weekly_dues
+
+    def get_payment_method(self):
+        return self.__payment_Method

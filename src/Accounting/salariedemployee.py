@@ -11,7 +11,7 @@ class SalariedEmployee(Employee):
         
     def makeSale(self, double_amt):
         reciept = receipt(self, transaction_amt)
-        self.__receipt_history.append(receipt)
+        self.__receipt_history.append(receipt(amt))
        
     def calculate_pay__(self, start_dt, end_dt):
         commission = 0
@@ -20,7 +20,9 @@ class SalariedEmployee(Employee):
         end_dt = start_dt + 28
         for receipts in self.__Receipts:
             if reciepts.get_date() <=start_dt and receipts.get_date() >= end_dt
-                total += receipts.calculatecommission_rate(self.__commission_rate):
-        
-        pay = total_pay
+                total += (self._commission_rate * receipt.get_sale_amount()):
+        total -= self.get_union_dues()
+        if total <= 0:
+            total = 0
+        return self.get_payment_method().pay("%s %s" % (self.get_first_name(), self.get_last_name()), total);
 
