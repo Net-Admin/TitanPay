@@ -62,6 +62,14 @@ class Menu:
         self.pickup_rbutton = tkinter.Radiobutton(self.row7, text='Pick Up', variable=self.radio_var2, value=2)
         self.deposit_rbutton = tkinter.Radiobutton(self.row7, text='Direct Deposit', variable=self.radio_var2, value=3)
 
+       #Trying to do a drop down menu but can't get it to function
+        #w = OptionMenu(self, variable='Payment Method')
+        #optionList = ('Mail', 'Pick Up', 'Direct Deposit')
+        #self.v = StringVar()
+        #self.v.set(optionList[0])
+        #self.om = OptionMenu(self, self.v, *optionList)
+
+
         self.row8 = tkinter.Frame(self.main_window)
         self.create_save_employee_button = tkinter.Button(self.row8, text='Create & Save Employee Record')
         self.edit_employee_button = tkinter.Button(self.row8, text='Modify Employee Record')
