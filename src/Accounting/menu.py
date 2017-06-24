@@ -1,9 +1,15 @@
 import sys
 import tkinter
 from tkinter import *
+from runpayroll import RunningPayroll
+import hourlyemployee
+import salariedemployee
+
+
+def runpayroll():
+    os.system('python runpayroll.py')
 
 class Menu:
-
     def __init__(self):
 
         self.main_window = Tk()
@@ -50,7 +56,7 @@ class Menu:
         self.state_entry.pack(padx=2, pady=2)
 
         self.zip_code = tkinter.LabelFrame(self.row2, text='Zip Code', bd=0, padx=2)
-        self.zip_code_entry = tkinter.Entry(self.zip_code, width=5
+        self.zip_code_entry = tkinter.Entry(self.zip_code, width=5)
         self.zip_code.pack(side='left', padx=2, pady=2)
         self.zip_code_entry.pack(padx=2, pady=2)
 
@@ -101,10 +107,10 @@ class Menu:
         self.row6.pack()
 
         self.display_timecards = tkinter.Button(self.row6, text="Display Time Cards", height=2)
-        self.display_sales.pack(side='left', padx=2, pady=2)
+        self.display_timecards.pack(side='left', padx=2, pady=2)
 
         self.display_sales = tkinter.Button(self.row6, text="View Sales", height=2)
-        self.display_timecards.pack(side='left', padx=2, pady=2)
+        self.display_sales.pack(side='left', padx=2, pady=2)
 
         self.row7 = tkinter.Frame(self.main_window)
         self.row7.pack(padx=2, pady=2)
@@ -140,7 +146,7 @@ class Menu:
         self.row9 = tkinter.Frame(self.main_window)
         self.row9.pack(padx=2, pady=2)
 
-        self.process_payroll_button = tkinter.Button(self.row9, text='Process Payroll', command=self.show_run)
+        self.process_payroll_button = tkinter.Button(self.row9, text='Process Payroll', command=runpayroll)
         self.process_payroll_button.pack(side='left', padx=2, pady=2)
 
         self.quit_button = tkinter.Button(self.row9, text='QUIT', command=self.main_window.destroy)
@@ -149,7 +155,7 @@ class Menu:
         tkinter.mainloop()
 
     def show_run(self):
-        payroll = Payroll()
+        runpayroll = Payroll()
 
         self.sub_window = tkinter.Tk()
 
