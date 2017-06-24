@@ -24,5 +24,5 @@ class SalariedEmployee(Employee):
         total -= self.get_union_dues()
         if total <= 0:
             total = 0
-        return self.get_payment_method().pay("%s %s" % (self.get_first_name(), self.get_last_name()), total);
+        return self.get_payment_method().pay("%s %s" % (self.get_first_name(), self.get_last_name()), total)
 

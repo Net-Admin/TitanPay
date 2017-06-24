@@ -1,4 +1,6 @@
 # This stores the TimeCard information
+from datetime import date
+from datetime import datetime
 
 class TimeCard:
 
