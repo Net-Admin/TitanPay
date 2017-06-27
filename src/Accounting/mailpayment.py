@@ -3,6 +3,7 @@
 class MailPayment(PaymentMethod):
 
     def __init__(self):
+        PaymentMethod.__init__()
 
-    def mail_payment(self, pay, Address):
+    def pay(self):self, pay, Address):
         return ("Mailing a check to ",self," for $",pay," to ",Address)

@@ -12,7 +12,7 @@ class Employee :
         self.__first_name = first_name
         self.__last_name = last_name
         self.__weekly_dues = weekly_dues
-        #self.__payment_method = payment_method
+        self.__payment_method = payment_method
 
     def get_employee_id(self):
         return self.__employee_id

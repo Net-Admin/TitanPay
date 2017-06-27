@@ -4,14 +4,13 @@ class SalariedEmployee(Employee):
 
     def __init__(self, employee_id, first_name, last_name, salary, commission_rate, weekly_dues):
         Employee.__init__(self, employee_id, first_name, last_name, weekly_dues)
-        Receipt.__init__(self, employee_id, first_name, last_name, receipt_amt)
         self.__salary = salary
         self.__commission_rate = commission_rate
         self.__receipts = []
         
     def makeSale(self, double_amt):
-        reciept = receipt(self, transaction_amt)
-        self.__receipt_history.append(receipt(amt))
+        receipt = Receipt(self, transaction_amt)
+        self.__receipt_history.append(receipt)
        
     def calculate_pay__(self, start_dt, end_dt):
         commission = 0

@@ -1,7 +1,6 @@
 # This stores the PaymentMethod info
 
-class PaymentMethod
+class PaymentMethod:
 
-    def __init__(self, pay):
-        self.__pay = pay
-        pass
+    def pay(self, amt):
+        print('Your money is lost in the abyss')
