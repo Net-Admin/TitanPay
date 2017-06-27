@@ -1,9 +1,10 @@
 import sys
+import os
 import tkinter
 from tkinter import *
-from runpayroll import RunningPayroll
-import hourlyemployee
-import salariedemployee
+#from runpayroll import RunningPayroll
+#import hourlyemployee
+#import salariedemployee
 
 
 def runpayroll():

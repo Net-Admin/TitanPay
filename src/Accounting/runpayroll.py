@@ -1,5 +1,7 @@
 #from hourly_employees import HourlyEmployee
 #from salariedemployee import SalariedEmployee
+import sys
+import os
 import csv
 import datetime
 
@@ -70,8 +72,6 @@ class RunningPayroll:
                 if int(receipt[0]) == employee_id:
                     rec_contents = recfile.readline()
 
-        #return employee_list
-    
         pay = HourlyEmployees.get(self, pay)
     
         tkinter.messagebox.showinfo('Response', 'self.payment_method')
