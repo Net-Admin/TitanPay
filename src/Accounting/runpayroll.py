@@ -5,14 +5,12 @@ import os
 import csv
 import datetime
 
-class RunningPayroll:
+class Payroll:
 
-    def __init__(self,employee):
-        self.main_window = tkinter.Tk()
-        self.new_window = tkinter.Tk()
-        self.employee = employee
+    def __init__(self):
+        self.employees = []
 
-    def run_payroll(self):
+    def run(self):
         self.my_button2 = tkinter.Button(self.new_window, text='Run Payroll', command=self.run)
         self.quit_button2 = tkinter.Button(self.new_window, text='QUIT', command=self.new_window.destroy)
                 
