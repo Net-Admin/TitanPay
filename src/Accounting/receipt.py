@@ -9,6 +9,5 @@ class Receipt:
     def commission__(self,commission_rate):
         self.__receipt = receipt
         self.__calculate_commission = receipt * commission_rate
-        
         return commission
     
