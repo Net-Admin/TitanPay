@@ -20,22 +20,26 @@ class Payroll:
     def run(self):
         employee_list = []
         #looks at hourly_employees
-        hinfile = open('hourly_employees.csv', 'r')
-        hr_contents = hinfile.readline()
-        hr_contents = hinfile.readline()
+        with open('hourly_employees.csv', newline=' ') as csvfile:
+            spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in spamreader:
+                return(', '.join(row))
         #looks at timecards
-        tinfile = open('timecards.csv', 'r')
-        t_contents = tinfile.readline()
-        t_contents = tinfile.readline()
+        with open('timecards.csv', newline=' ') as csvfile:
+            spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in spamreader:
+                return(', '.join(row))
         #looks at salaried_employees
-        sinfile = open('salaried_employees.csv', 'r')
-        sal_contents = sinfile.readline()
-        sal_contents = sinfile.readline()
+        with open('salaried_employees.csv', newline=' ') as csvfile:
+            spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in spamreader:
+                return(', '.join(row))
         #looks at receipts
-        recfile = open('receipts.csv', 'r')
-        rec_contents = recfile.readline()
-        rec_contents = recfile.readline()
-        
+        with open('receipts.csv', newline=' ') as csvfile:
+            spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in spamreader:
+                return(', '.join(row))
+                
         while hr_contents != '':
            employee = hr_contents.split(',')
            employee_id = int(employee[0])
