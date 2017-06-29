@@ -7,6 +7,9 @@ import datetime
 
 class Payroll:
 
+    def __init__(self):
+        self.employees = []
+        
     def run(self):
         self.my_button2 = tkinter.Button(self.new_window, text='Run Payroll', command=self.run)
         self.quit_button2 = tkinter.Button(self.new_window, text='QUIT', command=self.new_window.destroy)
@@ -15,12 +18,11 @@ class Payroll:
         self.quit_button2.pack()
                             
     def run(self):
-        employee_list = []
         #looks at hourly_employees
         with open('hourly_employees.csv', newline=' ') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-            for row in spamreader:
-                return(', '.join(row))
+            for row in spamreader:                return(', '.join(row))
+            
         #looks at timecards
         with open('timecards.csv', newline=' ') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
@@ -36,15 +38,15 @@ class Payroll:
             spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
             for row in spamreader:
                 return(', '.join(row))
-                
+                  
         while hr_contents != '':
            employee = hr_contents.split(',')
-           employee_id = row(employee[0])
-           last_name = row(employee[1])
-           first_name = row(employee[2])
-           hourlyrate = row(employee[3])
-           uniondues = row(employee[4])
-           payment_method = row(employee[5])
+           employee_id = row(EmployeeID)
+           last_name = row(LastName)
+           first_name = row(FirstName)
+           hourlyrate = row(HourlyRate)
+           uniondues = row(UnionDues)
+           payment_method = row(PaymentMethod)
            while t_contents != "":
                time = t_contents.split(',')
                if int(time[0]) == employee_id:
@@ -54,6 +56,7 @@ class Payroll:
                    employee_list.append(employee)
                t_contents = tinfile.readline()
            hr_contents = hinfile.readline()
+        
 
         while sal_contents != '':
             employ = sal_contents.split(',')
