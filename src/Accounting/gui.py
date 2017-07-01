@@ -128,13 +128,6 @@ class Menu:
         self.deposit_rbutton = tkinter.Radiobutton(self.row7, text='Direct Deposit', variable=self.radio_var2, value=3)
         self.deposit_rbutton.pack(side='left', padx=2, pady=2)
 
-       #Trying to do a drop down menu but can't get it to function
-        #w = OptionMenu(self, value=1, text='Payment Method')
-        #optionList = ('Mail', 'Pick Up', 'Direct Deposit')
-        #self.v = StringVar()
-        #self.v.set(optionList[0])
-        #self.om = OptionMenu(self, self.v, *optionList)
-
         self.row8 = tkinter.Frame(self.main_window)
         self.row8.pack(padx=2, pady=2)
 
@@ -156,7 +149,7 @@ class Menu:
         tkinter.mainloop()
 
     def show_run(self):
-        runpayroll = Payroll()
+        payroll = Payroll()
 
         self.sub_window = tkinter.Tk()
 
