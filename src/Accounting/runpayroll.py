@@ -20,23 +20,24 @@ class Payroll:
     def run(self):
         #looks at hourly_employees
         with open('hourly_employees.csv', newline=' ') as csvfile:
-            spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-            for row in spamreader:                return(', '.join(row))
+            reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in reader:
+                return(', '.join(row))
             
         #looks at timecards
         with open('timecards.csv', newline=' ') as csvfile:
-            spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-            for row in spamreader:
+            reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in reader:
                 return(', '.join(row))
         #looks at salaried_employees
         with open('salaried_employees.csv', newline=' ') as csvfile:
-            spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-            for row in spamreader:
+            reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in reader:
                 return(', '.join(row))
         #looks at receipts
         with open('receipts.csv', newline=' ') as csvfile:
-            spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-            for row in spamreader:
+            reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in reader:
                 return(', '.join(row))
                   
         while hr_contents != '':
