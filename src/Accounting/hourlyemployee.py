@@ -19,7 +19,7 @@ class HourlyEmployee(Employee):
 
     def calculate_pay__(self, start_dt, end_dt):
         total_pay = 0
-        for time_card in self.__time_card:
+        for time_card in self.__time_cards:
             if time_card.get_date() >=start_dt and time_card.get_date() <= end_dt:
                 total += time_card.calculate_daily_pay(self.__hourly_rate)
                 total -= self.get_union_dues
