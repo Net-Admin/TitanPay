@@ -8,7 +8,7 @@ from tkinter import *
 
 
 def runpayroll():
-    os.system('python runpayroll.py')
+    os.system('python payroll.py')
 
 class Menu:
     def __init__(self):

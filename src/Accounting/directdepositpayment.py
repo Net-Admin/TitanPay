@@ -1,4 +1,4 @@
-# This stores the DirectDeposit info
+import PaymentMethod
 
 class DirectDepositPayment(PaymentMethod):
 
