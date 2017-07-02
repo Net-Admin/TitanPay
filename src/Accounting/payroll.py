@@ -19,7 +19,7 @@ class Payroll:
                             
     def read_hourly_employees(self):
         #looks at hourly_employees
-        with open('hourly_employees.csv', newline=' ') as csvfile:
+        with open('.../src/Accounting/Data/hourly_employees.csv', newline=' ') as csvfile:
             hreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
 
             for row in hreader:
@@ -44,7 +44,7 @@ class Payroll:
                     payment_method == MailPayment('Generic', 'Generic', 'Generic', 'Generic')
 
         #looks at timecards
-        with open('timecards.csv', newline=' ') as csvfile:
+        with open('..src/Accounting/Data/timecards.csv', newline=' ') as csvfile:
             treader = csv.reader(csvfile, delimiter=' ', quotechar='|')
             for row in treader:
                 id = row['EmployeeId']
@@ -53,7 +53,7 @@ class Payroll:
                 start_dt = row['Date']
 
         #looks at salaried_employees
-        with open('salaried_employees.csv', newline=' ') as csvfile:
+        with open('...src/Accounting/Data/salaried_employees.csv', newline=' ') as csvfile:
             sreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
             for row in sreader:
                 id = row['EmployeeId']
@@ -66,7 +66,7 @@ class Payroll:
                 payment_method = lambda: None
 
         #looks at receipts
-        with open('receipts.csv', newline=' ') as csvfile:
+        with open('.../src/Accounting/Data/receipts.csv', newline=' ') as csvfile:
             reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
             for row in reader:
                 id = row['EmployeeId']

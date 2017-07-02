@@ -1,5 +1,4 @@
 from unittest import TestCase
-import test_timeCard
 
 
 class TestTimeCard(TestCase):

@@ -1,4 +1,5 @@
 from datetime import datetime
+from src.Accounting import employee
 
 class HourlyEmployee(Employee):
 
@@ -26,7 +27,7 @@ class HourlyEmployee(Employee):
 
             if total <= 0:
                 total = 0
-        return self.get__payment_method().pay("$s %s" % (self.get_first_name(), self.get_last_name()), total):
+        return self.get__payment_method().pay("$s %s" % (self.get_first_name(), self.get_last_name()), total)
 
         
         

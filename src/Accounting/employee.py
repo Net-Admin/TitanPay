@@ -5,7 +5,7 @@ from datetime import timedelta
 from receipt import Receipt
 from timecard import TimeCard
 
-class Employee :
+class Employee:
 
     def __init__(self, employee_id, first_name, last_name, weekly_dues, payment_method):
         self.__employee_id = employee_id
