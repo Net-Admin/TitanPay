@@ -1,9 +1,8 @@
-#from hourly_employees import HourlyEmployee
-#from salariedemployee import SalariedEmployee
 import sys
 import os
 import csv
 import datetime
+import src.Accounting.Data
 
 class Payroll:
 
@@ -78,12 +77,12 @@ class Payroll:
 
         while hr_contents != '':
            employee = hr_contents.split(',')
-           employee_id = row(EmployeeID)
-           last_name = row(LastName)
-           first_name = row(FirstName)
-           hourlyrate = row(HourlyRate)
-           uniondues = row(UnionDues)
-           payment_method = row(PaymentMethod)
+           employee_id = row('EmployeeID')
+           last_name = row('LastName')
+           first_name = row('FirstName')
+           hourlyrate = row('HourlyRate')
+           uniondues = row('UnionDues')
+           payment_method = row('PaymentMethod')
            while t_contents != "":
                time = t_contents.split(',')
                if int(time[0]) == employee_id:
