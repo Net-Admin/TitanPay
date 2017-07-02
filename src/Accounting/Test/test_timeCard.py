@@ -1,5 +1,5 @@
 from unittest import TestCase
-from src.Accounting import timecard
+import test_timeCard
 
 
 class TestTimeCard(TestCase):
