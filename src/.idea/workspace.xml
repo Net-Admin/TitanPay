@@ -12,7 +12,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="gui.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="payroll.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Accounting/payroll.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-747">
+              <caret line="75" column="22" lean-forward="false" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+              <folding>
+                <element signature="e#92#102#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gui.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Accounting/gui.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3121">
@@ -38,7 +50,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-15" />
-    <option name="width" value="3247" />
+    <option name="width" value="2058" />
     <option name="height" value="2085" />
   </component>
   <component name="ProjectView">
@@ -222,13 +234,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-15" y="0" width="3247" height="2085" extended-state="0" />
+    <frame x="-15" y="0" width="2058" height="2085" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1879238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30503145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -296,31 +308,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting/employee.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Accounting/mailpayment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting/pickuppayment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting/directdepositpayment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -360,13 +348,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting/payroll.py">
+    <entry file="file://$PROJECT_DIR$/Accounting/directdepositpayment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1297">
-          <caret line="84" column="2" lean-forward="true" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
-          <folding>
-            <element signature="e#92#102#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting/pickuppayment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting/hourly_employees.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting/salaried_employees.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting/employee.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -376,6 +394,32 @@
           <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting/receipts.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting/timecards.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting/payroll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-747">
+          <caret line="75" column="22" lean-forward="false" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+          <folding>
+            <element signature="e#92#102#0" expanded="true" />
           </folding>
         </state>
       </provider>

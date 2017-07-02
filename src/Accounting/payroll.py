@@ -17,30 +17,63 @@ class Payroll:
         self.my_button2.pack()
         self.quit_button2.pack()
                             
-    def run(self):
+    def read_hourly_employees(self):
         #looks at hourly_employees
         with open('hourly_employees.csv', newline=' ') as csvfile:
-            reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-            for row in reader:
-                return(', '.join(row))
+            hreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+
+            for row in hreader:
+                id = row['EmployeeId']
+                last_name = row['LastName']
+                first_name = row['FirstName']
+                hourly_rate = row['HourlyRate']
+                union_dues = row['UnionDues']
+                abbr_pay_method = row['PaymentMethod']
+                payment_method = lambda: None
+
+                try:
+                    union_dues = float(row['UnionDues'])
+                except ValueError:
+                    union_dues = 0.0
+
+                if abbr_pay_method == 'DD':
+                    payment_method = DirectDepositPayment("Generic", 0, 0)
+                elif abbr_pay_method == 'PU':
+                    payment_method == PickUpPayment()
+                elif abbr_pay_method == 'MA':
+                    payment_method == MailPayment('Generic', 'Generic', 'Generic', 'Generic')
 
         #looks at timecards
         with open('timecards.csv', newline=' ') as csvfile:
-            reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-            for row in reader:
-                return(', '.join(row))
+            treader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in treader:
+                id = row['EmployeeId']
+                clock_in = row['In']
+                clock_out = row['Out']
+                start_dt = row['Date']
 
         #looks at salaried_employees
         with open('salaried_employees.csv', newline=' ') as csvfile:
-            reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-            for row in reader:
-                return(', '.join(row))
+            sreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            for row in sreader:
+                id = row['EmployeeId']
+                last_name = row['LastName']
+                first_name = row['FirstName']
+                salary = row['Salary']
+                commissionrate = row['CommissionRate']
+                union_dues = row['UnionDues']
+                abbr_pay_method = row['PaymentMethod']
+                payment_method = lambda: None
 
         #looks at receipts
         with open('receipts.csv', newline=' ') as csvfile:
             reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
             for row in reader:
-                return(', '.join(row))
+                id = row['EmployeeId']
+                first_name = row['FirstName']
+                item = row['Item']
+                unitcost = row['Unit Cost']
+                rtotal = row['Total']
 
 
         while hr_contents != '':
