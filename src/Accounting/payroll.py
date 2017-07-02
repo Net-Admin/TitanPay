@@ -42,18 +42,11 @@ class Payroll:
                 elif abbr_pay_method == 'MA':
                     payment_method == MailPayment('Generic', 'Generic', 'Generic', 'Generic')
 
-        #looks at timecards
-        with open('..src/Accounting/Data/timecards.csv', newline=' ') as csvfile:
-            treader = csv.reader(csvfile, delimiter=',', quotechar='|')
-            for row in treader:
-                id = row['EmployeeId']
-                clock_in = row['In']
-                clock_out = row['Out']
-                start_dt = row['Date']
 
-        #looks at salaried_employees
-        with open('...src/Accounting/Data/salaried_employees.csv', newline=' ') as csvfile:
-            sreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+    def read_salaried_employees(self):
+        # looks at salaried_employees
+            with open('...src/Accounting/Data/salaried_employees.csv', newline=' ') as csvfile:
+                sreader = csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in sreader:
                 id = row['EmployeeId']
                 last_name = row['LastName']
@@ -64,6 +57,17 @@ class Payroll:
                 abbr_pay_method = row['PaymentMethod']
                 payment_method = lambda: None
 
+    def read_timecards(self):
+        #looks at timecards
+        with open('..src/Accounting/Data/timecards.csv', newline=' ') as csvfile:
+            treader = csv.reader(csvfile, delimiter=',', quotechar='|')
+            for row in treader:
+                id = row['EmployeeId']
+                clock_in = row['In']
+                clock_out = row['Out']
+                start_dt = row['Date']
+
+   def read_receipts(self):
         #looks at receipts
         with open('.../src/Accounting/Data/receipts.csv', newline=' ') as csvfile:
             reader = csv.reader(csvfile, delimiter=',', quotechar='|')
@@ -73,7 +77,6 @@ class Payroll:
                 item = row['Item']
                 unitcost = row['Unit Cost']
                 rtotal = row['Total']
-
 
         while hr_contents != '':
            employee = hr_contents.split(',')
