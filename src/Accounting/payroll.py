@@ -67,7 +67,7 @@ class Payroll:
                 clock_out = row['Out']
                 start_dt = row['Date']
 
-   def read_receipts(self):
+    def read_receipts(self):
         #looks at receipts
         with open('.../src/Accounting/Data/receipts.csv', newline=' ') as csvfile:
             reader = csv.reader(csvfile, delimiter=',', quotechar='|')
