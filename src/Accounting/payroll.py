@@ -9,17 +9,17 @@ class Payroll:
     def __init__(self):
         self.employees = []
 
-    def run(self):
-        self.my_button2 = tkinter.Button(self.new_window, text='Run Payroll', command=self.run)
-        self.quit_button2 = tkinter.Button(self.new_window, text='QUIT', command=self.new_window.destroy)
+    #def run(self):
+        #self.my_button2 = tkinter.Button(self.new_window, text='Run Payroll', command=self.run)
+        #self.quit_button2 = tkinter.Button(self.new_window, text='QUIT', command=self.new_window.destroy)
                 
-        self.my_button2.pack()
-        self.quit_button2.pack()
+        #self.my_button2.pack()
+        #self.quit_button2.pack()
                             
     def read_hourly_employees(self):
         #looks at hourly_employees
         with open('.../src/Accounting/Data/hourly_employees.csv', newline=' ') as csvfile:
-            hreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            hreader = csv.reader(csvfile, delimiter=',', quotechar='|')
 
             for row in hreader:
                 id = row['EmployeeId']
@@ -44,7 +44,7 @@ class Payroll:
 
         #looks at timecards
         with open('..src/Accounting/Data/timecards.csv', newline=' ') as csvfile:
-            treader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            treader = csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in treader:
                 id = row['EmployeeId']
                 clock_in = row['In']
@@ -53,7 +53,7 @@ class Payroll:
 
         #looks at salaried_employees
         with open('...src/Accounting/Data/salaried_employees.csv', newline=' ') as csvfile:
-            sreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            sreader = csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in sreader:
                 id = row['EmployeeId']
                 last_name = row['LastName']
@@ -66,7 +66,7 @@ class Payroll:
 
         #looks at receipts
         with open('.../src/Accounting/Data/receipts.csv', newline=' ') as csvfile:
-            reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+            reader = csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in reader:
                 id = row['EmployeeId']
                 first_name = row['FirstName']
