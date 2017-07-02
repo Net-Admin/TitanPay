@@ -2,12 +2,8 @@ import sys
 import os
 import tkinter
 from tkinter import *
-#from runpayroll import RunningPayroll
-#import hourlyemployee
-#import salariedemployee
 
-
-def runpayroll():
+def payroll():
     os.system('python payroll.py')
 
 class Menu:
@@ -140,7 +136,7 @@ class Menu:
         self.row9 = tkinter.Frame(self.main_window)
         self.row9.pack(padx=2, pady=2)
 
-        self.process_payroll_button = tkinter.Button(self.row9, text='Process Payroll', command=runpayroll)
+        self.process_payroll_button = tkinter.Button(self.row9, text='Process Payroll', command=payroll)
         self.process_payroll_button.pack(side='left', padx=2, pady=2)
 
         self.quit_button = tkinter.Button(self.row9, text='QUIT', command=self.main_window.destroy)
@@ -159,4 +155,4 @@ class Menu:
         self.payroll_message = tkinter.Label(self.sub_window, text="Employee Payroll", bd=0, padx=2)
         self.payroll_message.pack()
 
-test_gui = Menu();
+test_gui = Menu()

@@ -113,5 +113,4 @@ class Payroll:
     
         tkinter.messagebox.showinfo('Response', 'self.payment_method')
                      
-# create an instance of Running Payroll
 payroll = Payroll()
