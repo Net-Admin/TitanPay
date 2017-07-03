@@ -19,9 +19,12 @@
         <entry file="file://$PROJECT_DIR$/src/Accounting/gui.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="147" column="4" lean-forward="false" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="4" />
+              <caret line="146" column="4" lean-forward="false" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="4" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
+                <marker date="1499050896126" expanded="true" signature="136:7102" ph="..." />
+                <marker date="1499050896126" expanded="true" signature="160:6668" ph="..." />
+                <marker date="1499050896126" expanded="true" signature="6693:7102" ph="..." />
               </folding>
             </state>
           </provider>
@@ -30,8 +33,8 @@
       <file leaf-file-name="payroll.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Accounting/payroll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="95" column="34" lean-forward="true" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+            <state relative-caret-position="336">
+              <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -94,7 +97,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-15" />
-    <option name="width" value="3156" />
+    <option name="width" value="2458" />
     <option name="height" value="2085" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -534,10 +537,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-15" y="0" width="3156" height="2085" extended-state="0" />
+    <frame x="-15" y="0" width="2458" height="2085" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30006653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39081457" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3224852" sideWeight="0.5018144" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -914,17 +917,20 @@
     <entry file="file://$PROJECT_DIR$/src/Accounting/gui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="147" column="4" lean-forward="false" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="4" />
+          <caret line="146" column="4" lean-forward="false" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="4" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+            <marker date="1499050896126" expanded="true" signature="136:7102" ph="..." />
+            <marker date="1499050896126" expanded="true" signature="160:6668" ph="..." />
+            <marker date="1499050896126" expanded="true" signature="6693:7102" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Accounting/payroll.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="95" column="34" lean-forward="true" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+        <state relative-caret-position="336">
+          <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

@@ -3,6 +3,8 @@ import os
 import csv
 import datetime
 import src.Accounting.Data
+from employee import HourlyEmployee, SalariedEmployee
+from paymentmethod import MailPayment, PickUpPayment, DirectDepositPayment
 
 class Payroll:
 
@@ -15,9 +17,10 @@ class Payroll:
                 
         #self.my_button2.pack()
         #self.quit_button2.pack()
-                            
+
+    # looks at hourly_employees
     def read_hourly_employees(self):
-        #looks at hourly_employees
+
         with open('.../src/Accounting/Data/hourly_employees.csv', newline=' ') as csvfile:
             hreader = csv.reader(csvfile, delimiter=',', quotechar='|')
 
@@ -42,9 +45,8 @@ class Payroll:
                 elif abbr_pay_method == 'MA':
                     payment_method == MailPayment('Generic', 'Generic', 'Generic', 'Generic')
 
-
+    # looks at salaried_employees
     def read_salaried_employees(self):
-        # looks at salaried_employees
             with open('...src/Accounting/Data/salaried_employees.csv', newline=' ') as csvfile:
                 sreader = csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in sreader:
@@ -57,8 +59,9 @@ class Payroll:
                 abbr_pay_method = row['PaymentMethod']
                 payment_method = lambda: None
 
+    # looks at timecards
     def read_timecards(self):
-        #looks at timecards
+
         with open('..src/Accounting/Data/timecards.csv', newline=' ') as csvfile:
             treader = csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in treader:
@@ -75,8 +78,9 @@ class Payroll:
             for row in reader:
                 id = row['EmployeeId']
                 total = atof(row['Total'])
-                for emp_row.get_id() ==id:
-                    emp_row.make_sale(total)
+                for emp_row in self._employee:
+                    if emp_row.get_id() == id:
+                        emp_row.make_sale(total)
                 #first_name = row['FirstName']
                 #item = row['Item']
                 #unitcost = row['Unit Cost']
