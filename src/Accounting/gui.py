@@ -90,7 +90,6 @@ class Menu:
         self.hourly_rate_entry = tkinter.Entry(self.hourly_rate, width=15)
         self.hourly_rate.pack(side='left', padx=2, pady=2)
         self.hourly_rate_entry.pack(padx=2, pady=2)
-
         self.salary = tkinter.LabelFrame(self.row5, text="         Salary", bd=0, padx=2)
         self.salary_entry = tkinter.Entry(self.salary, width=15)
         self.salary.pack(side='left', padx=2, pady=2)
@@ -137,7 +136,7 @@ class Menu:
         self.row9 = tkinter.Frame(self.main_window)
         self.row9.pack(padx=2, pady=2)
 
-        self.process_payroll_button = tkinter.Button(self.row9, text='Process Payroll', command=payroll)
+        self.process_payroll_button = tkinter.Button(self.row9, text='Process Payroll', command=self.payroll)
         self.process_payroll_button.pack(side='left', padx=2, pady=2)
 
         self.quit_button = tkinter.Button(self.row9, text='QUIT', command=self.main_window.destroy)
