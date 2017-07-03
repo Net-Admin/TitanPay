@@ -136,7 +136,7 @@ class Menu:
         self.row9 = tkinter.Frame(self.main_window)
         self.row9.pack(padx=2, pady=2)
 
-        self.process_payroll_button = tkinter.Button(self.row9, text='Process Payroll', command=self.payroll)
+        self.process_payroll_button = tkinter.Button(self.row9, text='Process Payroll', command=self.show_run)
         self.process_payroll_button.pack(side='left', padx=2, pady=2)
 
         self.quit_button = tkinter.Button(self.row9, text='QUIT', command=self.main_window.destroy)
