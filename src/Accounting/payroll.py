@@ -67,53 +67,70 @@ class Payroll:
                 clock_out = row['Out']
                 start_dt = row['Date']
 
+    # looks at receipts
     def read_receipts(self):
-        #looks at receipts
         with open('.../src/Accounting/Data/receipts.csv', newline=' ') as csvfile:
-            reader = csv.reader(csvfile, delimiter=',', quotechar='|')
+            reader = csv.reader(csvfile, delimiter=',')
+            #reader = csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in reader:
                 id = row['EmployeeId']
-                first_name = row['FirstName']
-                item = row['Item']
-                unitcost = row['Unit Cost']
-                rtotal = row['Total']
+                total = atof(row['Total'])
+                for emp_row.get_id() ==id:
+                    emp_row.make_sale(total)
+                #first_name = row['FirstName']
+                #item = row['Item']
+                #unitcost = row['Unit Cost']
+                #rtotal = row['Total']
+    def process_payroll(self, label):
+        self.__read_hourly_employees()
+        self.__read_salaried_employees()
+        self.__read_timcards()
+        self.__read_receipts
 
-        while hr_contents != '':
-           employee = hr_contents.split(',')
-           employee_id = row('EmployeeID')
-           last_name = row('LastName')
-           first_name = row('FirstName')
-           hourlyrate = row('HourlyRate')
-           uniondues = row('UnionDues')
-           payment_method = row('PaymentMethod')
-           while t_contents != "":
-               time = t_contents.split(',')
-               if int(time[0]) == employee_id:
-                   clock_in = row(time[1])
-                   clock_out = row(time[2])
-                   employee = employee.hourlyemployee(self, employee_id, first_name, last_name, hourlyrate, uniondues, payment_method)
-                   employee_list.append(employee)
-               t_contents = tinfile.readline()
-           hr_contents = hinfile.readline()
+        message = ''
+        start_dt = datetime.datetime.strptime('5/01/2016', '%m/%d/%Y').date()
+        end_dt = datetime.datetime.strptime('5/25/2016', '%m/%d/%Y').date()
 
-        while sal_contents != '':
-            employ = sal_contents.split(',')
-            employee_id = row(employ[0])
-            last_name = row(employee(1))
-            first_name = row(employee(2))
-            salary = row(employee(3))
-            commissionrate = row(employee(4))
-            uniondues = row(employee(5))
-            payment_method = row(employee(6))
-            salemployee = employee.salariedemployee(self, employee_id, first_name, last_name, salary, commissionrate, uniondues, payment_method)
-            employee_list.append(salemployee)
-            while rec_contents != "":
-                receipt = rec_contents.split(',')
-                if row(receipt[0]) == employee_id:
-                    rec_contents = recfile.readline()
+        for emp in self._employees:
+            message += emp.get_full_name() + '' + emp.calculate_pay(start_dt, end_dt) + '\n'
+        label.config(text=message)
 
-        pay = HourlyEmployees.get(self, pay)
+        #while hr_contents != '':
+           #employee = hr_contents.split(',')
+           #employee_id = row('EmployeeID')
+           #last_name = row('LastName')
+           #first_name = row('FirstName')
+           #hourlyrate = row('HourlyRate')
+           #uniondues = row('UnionDues')
+           #payment_method = row('PaymentMethod')
+           #while t_contents != "":
+               #time = t_contents.split(',')
+               #if int(time[0]) == employee_id:
+                   #clock_in = row(time[1])
+                   #clock_out = row(time[2])
+                   #employee = employee.hourlyemployee(self, employee_id, first_name, last_name, hourlyrate, uniondues, payment_method)
+                   #employee_list.append(employee)
+               #t_contents = tinfile.readline()
+           #hr_contents = hinfile.readline()
+
+        #while sal_contents != '':
+            #employ = sal_contents.split(',')
+            #employee_id = row(employ[0])
+            #last_name = row(employee(1))
+            #first_name = row(employee(2))
+            #salary = row(employee(3))
+            #commissionrate = row(employee(4))
+            #uniondues = row(employee(5))
+            #payment_method = row(employee(6))
+            #salemployee = employee.salariedemployee(self, employee_id, first_name, last_name, salary, commissionrate, uniondues, payment_method)
+            #employee_list.append(salemployee)
+            #while rec_contents != "":
+                #receipt = rec_contents.split(',')
+                #if row(receipt[0]) == employee_id:
+                    #rec_contents = recfile.readline()
+
+        #pay = HourlyEmployees.get(self, pay)
     
-        tkinter.messagebox.showinfo('Response', 'self.payment_method')
+        #tkinter.messagebox.showinfo('Response', 'self.payment_method')
                      
-payroll = Payroll()
+#payroll = Payroll()
