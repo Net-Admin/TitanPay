@@ -162,13 +162,13 @@ class Menu:
     
     def receipts_db(self):
         conn = sqlite3.connect(receipts.db)
-        conn.execute('''Create table Employees(last_name, first_name, employee_id, hourly_rate, union_dues);''')
+        conn.execute('''Create table Receipts(last_name, first_name, employee_id, hourly_rate, union_dues);''')
         conn.commit
         conn.close()
         
     def timecards_db(self):
         conn = sqlite3.connect(timecards.db)
-        conn.execute('''Create table Employees(last_name, first_name, employee_id, hourly_rate, union_dues);''')
+        conn.execute('''Create table TimeCards(last_name, first_name, employee_id, hourly_rate, union_dues);''')
         conn.commit
         conn.close()
         
