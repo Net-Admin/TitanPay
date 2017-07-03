@@ -2,6 +2,8 @@ import payroll
 import sys
 import os
 import tkinter
+import csv
+import sqlite3
 from tkinter import *
 
 def payroll():
@@ -79,7 +81,6 @@ class Menu:
 
         self.hourly_rbutton = tkinter.Radiobutton(self.row4, text='Hourly', variable=self.radio_var1, value=1)
         self.hourly_rbutton.pack(side='left', padx=2, pady=2)
-
         self.salary_rbutton = tkinter.Radiobutton(self.row4, text='Salary', variable=self.radio_var1, value=2)
         self.salary_rbutton.pack(side='left', padx=2, pady=2)
 
@@ -87,10 +88,10 @@ class Menu:
         self.row5.pack()
 
         self.hourly_rate = tkinter.LabelFrame(self.row5, text="     Hourly Rate", bd=0, padx=2)
+
         self.hourly_rate_entry = tkinter.Entry(self.hourly_rate, width=15)
         self.hourly_rate.pack(side='left', padx=2, pady=2)
-        self.hourly_rate_entry.pack(padx=2, pady=2)
-        self.salary = tkinter.LabelFrame(self.row5, text="         Salary", bd=0, padx=2)
+        self.hourly_rate_entry.pack(padx=2, pady=2)        self.salary = tkinter.LabelFrame(self.row5, text="         Salary", bd=0, padx=2)
         self.salary_entry = tkinter.Entry(self.salary, width=15)
         self.salary.pack(side='left', padx=2, pady=2)
         self.salary_entry.pack(padx=2, pady=2)
@@ -135,15 +136,42 @@ class Menu:
 
         self.row9 = tkinter.Frame(self.main_window)
         self.row9.pack(padx=2, pady=2)
+        
+        self.Import_Employees_button = tkinter.Button(self.row9, text='Import Employees', command=self.employees_db)
+        self.Import_Employees_button.pack(side='left', padx=2, pady=2)
+        
+        self.Import_Employees_button = tkinter.Button(self.row10, text='Import Receipts', command=self.receipts_db)
+        self.Import_Employees_button.pack(side='left', padx=2, pady=2)
+        
+        self.Import_Employees_button = tkinter.Button(self.row11, text='Import TimeCards', command=self.timecards_db)
+        self.Import_Employees_button.pack(side='left', padx=2, pady=2)
 
-        self.process_payroll_button = tkinter.Button(self.row9, text='Process Payroll', command=self.show_run)
+        self.process_payroll_button = tkinter.Button(self.row12, text='Process Payroll', command=self.show_run)
         self.process_payroll_button.pack(side='left', padx=2, pady=2)
-
-        self.quit_button = tkinter.Button(self.row9, text='QUIT', command=self.main_window.destroy)
+       
+        self.quit_button = tkinter.Button(self.row13, text='QUIT', command=self.main_window.destroy)
         self.quit_button.pack(side='right', padx=2, pady=2)
 
         tkinter.mainloop()
 
+    def employee_db(self):
+        conn = sqlite3.connect(employees.db)
+        conn.execute('''Create table Employees(last_name, first_name, employee_id, hourly_rate, union_dues);''')
+        conn.commit
+        conn.close()
+    
+    def receipts_db(self):
+        conn = sqlite3.connect(receipts.db)
+        conn.execute('''Create table Employees(last_name, first_name, employee_id, hourly_rate, union_dues);''')
+        conn.commit
+        conn.close()
+        
+    def timecards_db(self):
+        conn = sqlite3.connect(timecards.db)
+        conn.execute('''Create table Employees(last_name, first_name, employee_id, hourly_rate, union_dues);''')
+        conn.commit
+        conn.close()
+        
     def show_run(self):
         payroll = Payroll()
 
