@@ -1,4 +1,3 @@
-from src.Accounting.payroll import Payroll
 import sys
 import os
 import tkinter
@@ -88,10 +87,11 @@ class Menu:
         self.row5.pack()
 
         self.hourly_rate = tkinter.LabelFrame(self.row5, text="     Hourly Rate", bd=0, padx=2)
-
         self.hourly_rate_entry = tkinter.Entry(self.hourly_rate, width=15)
         self.hourly_rate.pack(side='left', padx=2, pady=2)
-        self.hourly_rate_entry.pack(padx=2, pady=2)        self.salary = tkinter.LabelFrame(self.row5, text="         Salary", bd=0, padx=2)
+        self.hourly_rate_entry.pack(padx=2, pady=2)
+
+        self.salary = tkinter.LabelFrame(self.row5, text="         Salary", bd=0, padx=2)
         self.salary_entry = tkinter.Entry(self.salary, width=15)
         self.salary.pack(side='left', padx=2, pady=2)
         self.salary_entry.pack(padx=2, pady=2)

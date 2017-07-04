@@ -18,7 +18,7 @@ class Payroll:
             reader = csv.reader(csvfile)
             next(reader, None) #Skip the header
 
-            for row in hreader: row: <class 'list'>: ['6', 'Hart', 'Kevin', '9.99', '150.00'. ' DD']
+            for row in header: row: <class 'list'>: ['6', 'Hart', 'Kevin', '9.99', '150.00'. ' DD']
                 id = row[0]
                 last_name = row[1]
                 first_name = row[2]
@@ -46,7 +46,7 @@ class Payroll:
             reader = csv.reader(csvfile)
             next(reader, None)  # Skip the header
 
-            for row in hreader: row: < class 'list'>: ['6', 'Hart', 'Kevin', '9.99', '150.00'. ' DD']
+            for row in header: row:<class 'list'>: ['6', 'Hart', 'Kevin', '9.99', '150.00'. ' DD']
 
                 id = row[0]
                 last_name = row[1]
