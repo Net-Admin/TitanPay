@@ -1,4 +1,5 @@
 # This stores the SalaridEmployee information
+
 from datetime import datetime
 from src.Accounting.paymentmethod import PaymentMethod
 from src.Accounting.employee import Employee

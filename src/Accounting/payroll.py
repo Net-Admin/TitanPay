@@ -2,6 +2,8 @@ import sys
 import os
 import csv
 import datetime
+from src.Accounting.hourlyemployee import HourlyEmployee
+from src.Accounting.salariedemployee import SalariedEmployee
 from src.Accounting.directdepositpayment import DirectDepositPayment
 from src.Accounting.mailpayment import MailPayment
 from src.Accounting.pickuppayment import PickUpPayment
@@ -18,7 +20,7 @@ class Payroll:
             reader = csv.reader(csvfile)
             next(reader, None) #Skip the header
 
-            for row in header: row: <class 'list'>: ['6', 'Hart', 'Kevin', '9.99', '150.00'. ' DD']
+            for row in header:
                 id = row[0]
                 last_name = row[1]
                 first_name = row[2]
@@ -46,8 +48,7 @@ class Payroll:
             reader = csv.reader(csvfile)
             next(reader, None)  # Skip the header
 
-            for row in header: row:<class 'list'>: ['6', 'Hart', 'Kevin', '9.99', '150.00'. ' DD']
-
+            for row in header:
                 id = row[0]
                 last_name = row[1]
                 first_name = row[2]
@@ -93,7 +94,7 @@ class Payroll:
                         emp.make_sale(total)
 
 
-   def process_payroll(self, label):
+    def process_payroll(self, label):
         self.read_hourly_employees()
         self.read_salaried_employees()
         self.read_timcards()
