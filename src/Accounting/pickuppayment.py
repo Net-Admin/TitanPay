@@ -1,9 +1,11 @@
 # This stores the PickupPayment info
+from src.Accounting.paymentmethod import PaymentMethod
 
 class PickUpPayment(PaymentMethod):
 
-    def __init__(self):
-        PaymentMethod.__init__()
+    def __init__(self, amt):
+        PaymentMethod.__init__(self)
+        self.amt = amt
 
-    def pay(self, pay, Address):
-        return ("A Check for ", amt, " is waiting for ", self, " at the PostMaster."
+    def pay(self, amt):
+        return ("A Check for ", self.amt, " is waiting for you at the PostMaster.")

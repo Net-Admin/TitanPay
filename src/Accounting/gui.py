@@ -1,4 +1,4 @@
-import payroll
+from src.Accounting.payroll import Payroll
 import sys
 import os
 import tkinter

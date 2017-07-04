@@ -1,8 +1,11 @@
 # This stores the SalaridEmployee information
+from datetime import datetime
+from src.Accounting.paymentmethod import PaymentMethod
+from src.Accounting.employee import Employee
 
 class SalariedEmployee(Employee):
 
-    def __init__(self, employee_id, first_name, last_name, salary, commission_rate, weekly_dues):
+    def __init__(self, employee_id, first_name, last_name, salary, commission_rate, weekly_dues, payment_method):
         Employee.__init__(self, employee_id, first_name, last_name, weekly_dues, payment_method)
         self.__salary = salary
         self.__commission_rate = commission_rate

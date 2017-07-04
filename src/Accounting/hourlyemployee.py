@@ -1,9 +1,10 @@
 from datetime import datetime
-from src.Accounting import employee
+from src.Accounting.paymentmethod import PaymentMethod
+from src.Accounting.employee import Employee
 
 class HourlyEmployee(Employee):
 
-    def __init__(self, employee_id, first_name, last_name, hourly_rate, weekly_dues):
+    def __init__(self, employee_id, first_name, last_name, hourly_rate, weekly_dues, payment_method):
         Employee.__init__(self, employee_id, first_name, last_name, weekly_dues, payment_method)
         self.__hourly_rate = hourly_rate
         self.__timecards = []
