@@ -4,6 +4,10 @@ import tkinter
 import csv
 import sqlite3
 from tkinter import *
+from src.Accounting.payroll import Payroll
+from src.DataBaseFiles.dbcreator import DBCreator
+from src.DataBaseFiles.employee_db import EmployeeDataBase
+from src.DataBaseFiles.timecard_db import TimeCardDb
 
 def payroll():
     os.system('python payroll.py')
@@ -75,37 +79,52 @@ class Menu:
         self.row4 = tkinter.Frame(self.main_window)
         self.row4.pack(padx=2, pady=2)
 
-        self.employee_type_label = tkinter.Label(self.row4, text="Employee Type: ")
-        self.employee_type_label.pack(side='left', padx=2, pady=2)
+        self.payment_method_label = tkinter.Label(self.row4, text='Payment Method: ')
+        self.payment_method_label.pack(side='left', padx=2, pady=2)
 
-        self.hourly_rbutton = tkinter.Radiobutton(self.row4, text='Hourly', variable=self.radio_var1, value=1)
-        self.hourly_rbutton.pack(side='left', padx=2, pady=2)
-        self.salary_rbutton = tkinter.Radiobutton(self.row4, text='Salary', variable=self.radio_var1, value=2)
-        self.salary_rbutton.pack(side='left', padx=2, pady=2)
+        self.mail_rbutton = tkinter.Radiobutton(self.row4, text='Mail', variable=self.radio_var2, value=1)
+        self.mail_rbutton.pack(side='left', padx=2, pady=2)
+
+        self.pickup_rbutton = tkinter.Radiobutton(self.row4, text='Pick Up', variable=self.radio_var2, value=2)
+        self.pickup_rbutton.pack(side='left', padx=2, pady=2)
+
+        self.deposit_rbutton = tkinter.Radiobutton(self.row4, text='Direct Deposit', variable=self.radio_var2, value=3)
+        self.deposit_rbutton.pack(side='left', padx=2, pady=2)
+
+        #self.employee_type_label = tkinter.Label(self.row4, text="Employee Type: ")
+        #self.employee_type_label.pack(side='left', padx=2, pady=2)
+
+        #self.hourly_rbutton = tkinter.Radiobutton(self.row4, text='Hourly', variable=self.radio_var1, value=1)
+        #self.hourly_rbutton.pack(side='left', padx=2, pady=2)
+        #self.salary_rbutton = tkinter.Radiobutton(self.row4, text='Salary', variable=self.radio_var1, value=2)
+        #self.salary_rbutton.pack(side='left', padx=2, pady=2)
 
         self.row5 = tkinter.Frame(self.main_window)
         self.row5.pack()
 
-        self.hourly_rate = tkinter.LabelFrame(self.row5, text="     Hourly Rate", bd=0, padx=2)
-        self.hourly_rate_entry = tkinter.Entry(self.hourly_rate, width=15)
-        self.hourly_rate.pack(side='left', padx=2, pady=2)
-        self.hourly_rate_entry.pack(padx=2, pady=2)
+        self.display_timecards = tkinter.Button(self.row5, text="Display Time Cards", height=2)
+        self.display_timecards.pack(side='left', padx=2, pady=2)
 
-        self.salary = tkinter.LabelFrame(self.row5, text="         Salary", bd=0, padx=2)
-        self.salary_entry = tkinter.Entry(self.salary, width=15)
-        self.salary.pack(side='left', padx=2, pady=2)
-        self.salary_entry.pack(padx=2, pady=2)
+        #self.hourly_rate = tkinter.LabelFrame(self.row5, text="     Hourly Rate", bd=0, padx=2)
+        #self.hourly_rate_entry = tkinter.Entry(self.hourly_rate, width=15)
+        #self.hourly_rate.pack(side='left', padx=2, pady=2)
+        #self.hourly_rate_entry.pack(padx=2, pady=2)
 
-        self.union_dues = tkinter.LabelFrame(self.row5, text=" Union Dues: ", bd=0, padx=2)
-        self.union_dues_entry = tkinter.Entry(self.union_dues, width=10)
-        self.union_dues.pack(side='left', padx=2, pady=2)
-        self.union_dues_entry.pack(side='left', padx=2, pady=2)
+        #self.salary = tkinter.LabelFrame(self.row5, text="         Salary", bd=0, padx=2)
+        #self.salary_entry = tkinter.Entry(self.salary, width=15)
+        #self.salary.pack(side='left', padx=2, pady=2)
+        #self.salary_entry.pack(padx=2, pady=2)
+
+        #self.union_dues = tkinter.LabelFrame(self.row5, text=" Union Dues: ", bd=0, padx=2)
+        #self.union_dues_entry = tkinter.Entry(self.union_dues, width=10)
+        #self.union_dues.pack(side='left', padx=2, pady=2)
+        #self.union_dues_entry.pack(side='left', padx=2, pady=2)
 
         self.row6 = tkinter.Frame(self.main_window)
         self.row6.pack()
 
-        self.display_timecards = tkinter.Button(self.row6, text="Display Time Cards", height=2)
-        self.display_timecards.pack(side='left', padx=2, pady=2)
+        #self.display_timecards = tkinter.Button(self.row6, text="Display Time Cards", height=2)
+        #self.display_timecards.pack(side='left', padx=2, pady=2)
 
         self.display_sales = tkinter.Button(self.row6, text="View Sales", height=2)
         self.display_sales.pack(side='left', padx=2, pady=2)
@@ -113,23 +132,26 @@ class Menu:
         self.row7 = tkinter.Frame(self.main_window)
         self.row7.pack(padx=2, pady=2)
 
-        self.payment_method_label = tkinter.Label(self.row7, text='Payment Method: ')
-        self.payment_method_label.pack(side='left', padx=2, pady=2)
+        self.create_save_employee_button = tkinter.Button(self.row7, text='Create & Save Employee Record')
+        self.create_save_employee_button.pack(side='left', padx=2, pady=2)
 
-        self.mail_rbutton = tkinter.Radiobutton(self.row7, text='Mail', variable=self.radio_var2, value=1)
-        self.mail_rbutton.pack(side='left', padx=2, pady=2)
+        #self.payment_method_label = tkinter.Label(self.row7, text='Payment Method: ')
+        #self.payment_method_label.pack(side='left', padx=2, pady=2)
 
-        self.pickup_rbutton = tkinter.Radiobutton(self.row7, text='Pick Up', variable=self.radio_var2, value=2)
-        self.pickup_rbutton.pack(side='left', padx=2, pady=2)
+        #self.mail_rbutton = tkinter.Radiobutton(self.row7, text='Mail', variable=self.radio_var2, value=1)
+        #self.mail_rbutton.pack(side='left', padx=2, pady=2)
 
-        self.deposit_rbutton = tkinter.Radiobutton(self.row7, text='Direct Deposit', variable=self.radio_var2, value=3)
-        self.deposit_rbutton.pack(side='left', padx=2, pady=2)
+        #self.pickup_rbutton = tkinter.Radiobutton(self.row7, text='Pick Up', variable=self.radio_var2, value=2)
+        #self.pickup_rbutton.pack(side='left', padx=2, pady=2)
+
+        #self.deposit_rbutton = tkinter.Radiobutton(self.row7, text='Direct Deposit', variable=self.radio_var2, value=3)
+        #self.deposit_rbutton.pack(side='left', padx=2, pady=2)
 
         self.row8 = tkinter.Frame(self.main_window)
         self.row8.pack(padx=2, pady=2)
 
-        self.create_save_employee_button = tkinter.Button(self.row8, text='Create & Save Employee Record')
-        self.create_save_employee_button.pack(side='left', padx=2, pady=2)
+        #self.create_save_employee_button = tkinter.Button(self.row8, text='Create & Save Employee Record')
+        #self.create_save_employee_button.pack(side='left', padx=2, pady=2)
 
         self.edit_employee_button = tkinter.Button(self.row8, text='Modify Employee Record')
         self.edit_employee_button.pack(side='left', padx=2, pady=2)
@@ -137,17 +159,29 @@ class Menu:
         self.row9 = tkinter.Frame(self.main_window)
         self.row9.pack(padx=2, pady=2)
         
-        self.Import_Employees_button = tkinter.Button(self.row9, text='Import Employees', command=self.employees_db)
+        self.Import_Employees_button = tkinter.Button(self.row9, text='Import Employees', command=self.employee_db)
         self.Import_Employees_button.pack(side='left', padx=2, pady=2)
+
+        self.row10 = tkinter.Frame(self.main_window)
+        self.row10.pack(padx=2, pady=2)
         
-        self.Import_Employees_button = tkinter.Button(self.row10, text='Import Receipts', command=self.receipts_db)
-        self.Import_Employees_button.pack(side='left', padx=2, pady=2)
+        #self.Import_Employees_button = tkinter.Button(self.row10, text='Import Receipts', command=self.receipts_db)
+        #self.Import_Employees_button.pack(side='left', padx=2, pady=2)
+
+        self.row11 = tkinter.Frame(self.main_window)
+        self.row11.pack(padx=2, pady=2)
         
-        self.Import_Employees_button = tkinter.Button(self.row11, text='Import TimeCards', command=self.timecards_db)
+        self.Import_Employees_button = tkinter.Button(self.row11, text='Import TimeCards', command=self.timecard_db)
         self.Import_Employees_button.pack(side='left', padx=2, pady=2)
+
+        self.row12 = tkinter.Frame(self.main_window)
+        self.row12.pack(padx=2, pady=2)
 
         self.process_payroll_button = tkinter.Button(self.row12, text='Process Payroll', command=self.show_run)
         self.process_payroll_button.pack(side='left', padx=2, pady=2)
+
+        self.row13 = tkinter.Frame(self.main_window)
+        self.row13.pack(padx=2, pady=2)
        
         self.quit_button = tkinter.Button(self.row13, text='QUIT', command=self.main_window.destroy)
         self.quit_button.pack(side='right', padx=2, pady=2)
@@ -155,19 +189,19 @@ class Menu:
         tkinter.mainloop()
 
     def employee_db(self):
-        conn = sqlite3.connect(employees.db)
+        conn = sqlite3.connect(employee_db)
         conn.execute('''Create table Employees(last_name, first_name, employee_id, hourly_rate, union_dues);''')
         conn.commit
         conn.close()
     
     def receipts_db(self):
-        conn = sqlite3.connect(receipts.db)
+        conn = sqlite3.connect(receipts_db)
         conn.execute('''Create table Receipts(last_name, first_name, employee_id, hourly_rate, union_dues);''')
         conn.commit
         conn.close()
         
-    def timecards_db(self):
-        conn = sqlite3.connect(timecards.db)
+    def timecard_db(self):
+        conn = sqlite3.connect(timecard_db)
         conn.execute('''Create table TimeCards(last_name, first_name, employee_id, hourly_rate, union_dues);''')
         conn.commit
         conn.close()

@@ -48,7 +48,7 @@ class Payroll:
             reader = csv.reader(csvfile)
             next(reader, None)  # Skip the header
 
-            for row in header:
+            for row in reader:
                 id = row[0]
                 last_name = row[1]
                 first_name = row[2]

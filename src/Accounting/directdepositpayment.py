@@ -1,4 +1,4 @@
-from src.Accounting import PaymentMethod
+from src.Accounting.paymentmethod import PaymentMethod
 
 class DirectDepositPayment(PaymentMethod):
 

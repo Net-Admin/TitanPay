@@ -22,8 +22,8 @@ class SalariedEmployee(Employee):
         total_pay = 0
         end_dt = start_dt + 28
         for receipts in self.__Receipts:
-            if reciepts.get_date() <=start_dt and receipts.get_date() >= end_dt
-                total += (self._commission_rate * receipt.get_sale_amount()):
+            if receipts.get_date() <=start_dt and receipts.get_date() >= end_dt:
+                total += (self._commission_rate * receipt.get_sale_amount())
         total -= self.get_union_dues()
         if total <= 0:
             total = 0
