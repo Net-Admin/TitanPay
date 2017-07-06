@@ -1,0 +1,23 @@
+import sqlite3
+
+
+
+def import_receipts():
+    conn = sqlite3.connect('receipts_db')
+    cd = conn.cursor()
+    cd.execute('Drop Table receipts')
+    cd.execute('Create Table receipts (employeeid TEXT NOT Null, ')
+
+    rec_hand = open('recepts.csv', 'r')
+    count = 0
+    for receipt in rec_hand:
+        if count != 0:
+            tc = receipt.split(',')
+            rec[3] = rec[3].strip()
+            cd.execute('INSERT INTO receipts(emp_id, total) VALUES (?, ?)', (rec[0], rec[1]))
+
+    count += 1
+
+    rec_hand.close()
+    conn.commit()
+    conn.close()
