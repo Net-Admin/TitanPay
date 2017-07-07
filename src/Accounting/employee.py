@@ -2,8 +2,8 @@
 from datetime import date
 from datetime import datetime
 from datetime import timedelta
-from receipt import Receipt
-from timecard import TimeCard
+from src.Accounting.receipt import Receipt
+from src.Accounting.timecard import TimeCard
 
 class Employee:
 

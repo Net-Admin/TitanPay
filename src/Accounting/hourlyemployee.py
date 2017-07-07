@@ -1,6 +1,7 @@
 from datetime import datetime
 from src.Accounting.paymentmethod import PaymentMethod
 from src.Accounting.employee import Employee
+from src.Accounting.timecard import TimeCard
 
 class HourlyEmployee(Employee):
 
@@ -11,7 +12,7 @@ class HourlyEmployee(Employee):
 
     def clockIn(self):
         tc = TimeCard(datetime.now(), datetime.now().time())
-        self.__time_cards.append(tc)
+        self.__time_card.append(tc)
 
     def clockOut(self):
         current_dt = datetime.now()
