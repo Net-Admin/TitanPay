@@ -1,7 +1,7 @@
 import sqlite3
 from src.Accounting.hourlyemployee import HourlyEmployee
 from src.Accounting.salariedemployee import SalariedEmployee
-from src.Data import csv
+import csv
 
 
 class EmployeeDataBase:

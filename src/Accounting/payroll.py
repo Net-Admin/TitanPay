@@ -2,8 +2,10 @@ import sys
 import os
 import csv
 import datetime
+from src.DataBaseFiles.dbcreator import DBCreator
 from src.Accounting.hourlyemployee import HourlyEmployee
 from src.Accounting.salariedemployee import SalariedEmployee
+from src.Accounting.timecard import TimeCard
 from src.Accounting.directdepositpayment import DirectDepositPayment
 from src.Accounting.mailpayment import MailPayment
 from src.Accounting.pickuppayment import PickUpPayment
@@ -11,6 +13,7 @@ from src.Accounting.pickuppayment import PickUpPayment
 class Payroll:
 
     def __init__(self):
+        self.__dbcreator = DBCreator()
         self.employees = []
 
     # looks at hourly_employees
@@ -20,7 +23,7 @@ class Payroll:
             reader = csv.reader(csvfile)
             next(reader, None) #Skip the header
 
-            for row in header:
+            for row in reader:
                 id = row[0]
                 last_name = row[1]
                 first_name = row[2]
@@ -34,9 +37,9 @@ class Payroll:
                 if abbr_pay_method == 'DD':
                     payment_method = DirectDepositPayment("Generic", 0, 0)
                 elif abbr_pay_method == 'PU':
-                    payment_method == PickUpPayment()
+                    payment_method = PickUpPayment()
                 elif abbr_pay_method == 'MA':
-                    payment_method == MailPayment()
+                    payment_method = MailPayment()
 
                 emp = HourlyEmployee(id, first_name, last_name, hourly_rate, union_dues, payment_method)
                 self.employees.append(emp)
@@ -60,16 +63,16 @@ class Payroll:
                 if abbr_pay_method == 'DD':
                     payment_method = DirectDepositPayment("Generic", 0, 0)
                 elif abbr_pay_method == 'PU':
-                    payment_method == PickUpPayment()
+                    payment_method = PickUpPayment
                 elif abbr_pay_method == 'MA':
-                    payment_method == MailPayment()
+                    payment_method = MailPayment
 
                 emp = SalariedEmployee(id, first_name, last_name, salary, commissionrate, union_dues, payment_method)
                 self.employees.append(emp)
 
 
     # looks at timecards
-    def read_timecards(self):
+    def read_timecard(self):
 
         with open('..src/Accounting/Data/timecards.csv', newline=' ') as csvfile:
             treader = csv.reader(csvfile, delimiter=',', quotechar='|')
@@ -95,9 +98,9 @@ class Payroll:
 
 
     def process_payroll(self, label):
-        self.read_hourly_employees()
-        self.read_salaried_employees()
-        self.read_timcards()
+        self.read_hourly_employees
+        self.read_salaried_employees
+        self.read_timcard
         self.read_receipts
 
         message = ''
@@ -108,39 +111,6 @@ class Payroll:
             message += emp.get_full_name() + '' + emp.calculate_pay(start_dt, end_dt) + '\n'
         label.config(text=message)
 
-        #while hr_contents != '':
-           #employee = hr_contents.split(',')
-           #employee_id = row('EmployeeID')
-           #last_name = row('LastName')
-           #first_name = row('FirstName')
-           #hourlyrate = row('HourlyRate')
-           #uniondues = row('UnionDues')
-           #payment_method = row('PaymentMethod')
-           #while t_contents != "":
-               #time = t_contents.split(',')
-               #if int(time[0]) == employee_id:
-                   #clock_in = row(time[1])
-                   #clock_out = row(time[2])
-                   #employee = employee.hourlyemployee(self, employee_id, first_name, last_name, hourlyrate, uniondues, payment_method)
-                   #employee_list.append(employee)
-               #t_contents = tinfile.readline()
-           #hr_contents = hinfile.readline()
-
-        #while sal_contents != '':
-            #employ = sal_contents.split(',')
-            #employee_id = row(employ[0])
-            #last_name = row(employee(1))
-            #first_name = row(employee(2))
-            #salary = row(employee(3))
-            #commissionrate = row(employee(4))
-            #uniondues = row(employee(5))
-            #payment_method = row(employee(6))
-            #salemployee = employee.salariedemployee(self, employee_id, first_name, last_name, salary, commissionrate, uniondues, payment_method)
-            #employee_list.append(salemployee)
-            #while rec_contents != "":
-                #receipt = rec_contents.split(',')
-                #if row(receipt[0]) == employee_id:
-                    #rec_contents = recfile.readline()
 
         #pay = HourlyEmployees.get(self, pay)
     
